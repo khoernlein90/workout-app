@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FETCH_USER } from "./types";
+import { FETCH_USER, FETCH_WORKOUTS } from "./types";
 
 export const fetchUser = () => async dispatch => {
   const res = await axios.get("/api/current_user");
@@ -11,8 +11,13 @@ export const handleToken = token => async dispatch => {
   dispatch({ type: FETCH_USER, payload: res.data });
 };
 
-export const submitWorkout = values => async dispatch => {
+export const submitWorkout = (values, history) => async dispatch => {
   const res = await axios.post("/api/workouts", values);
-
+  history.push("/workouts");
   dispatch({ type: FETCH_USER, payload: res.data });
+};
+
+export const fetchWorkouts = () => async dispatch => {
+  const res = await axios.get("/api/workouts");
+  dispatch({ type: FETCH_WORKOUTS, payload: res.data });
 };

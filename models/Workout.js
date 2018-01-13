@@ -3,7 +3,9 @@ const { Schema } = mongoose;
 
 const workoutSchema = new Schema({
   exercise: String,
-  reps: Number,
+  reps: String,
+  sets: String,
+  weight: String,
   _user: {
     type: Schema.Types.ObjectId,
     ref: "User"

@@ -14,7 +14,7 @@ class WorkoutForm extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ marginTop: "20px" }} id="form" className="container">
         <form onSubmit={this.props.handleSubmit(this.props.onWorkoutSubmit)}>
           {this.renderFields()}
           <Link to="/workouts" className="red btn-flat white-text">

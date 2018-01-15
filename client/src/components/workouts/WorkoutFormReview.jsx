@@ -16,18 +16,22 @@ const WorkoutFormReview = ({ onCanel, formValues, submitWorkout, history }) => {
     );
   });
   return (
-    <div>
-      <h3>Please confirm your entries</h3>
-      <div>{reviewFields}</div>
-      <button className="yellow darken-3 white-text btn-flat " onClick={onCanel}>
-        Back
-      </button>
-      <button
-        onClick={() => submitWorkout(formValues, history)}
-        className="green white-text btn-flat right"
-      >
-        Submit <i className="material-icons white-text right">done</i>
-      </button>
+    <div id="card-review" className="card">
+      <div className="card-content">
+        <span className="card-title">Please confirm your entries</span>
+        <div>{reviewFields}</div>
+        <div className="card-action">
+          <button className="yellow darken-3 white-text btn-flat " onClick={onCanel}>
+            Back
+          </button>
+          <button
+            onClick={() => submitWorkout(formValues, history)}
+            className="green white-text btn-flat right"
+          >
+            Submit <i className="material-icons white-text right">done</i>
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

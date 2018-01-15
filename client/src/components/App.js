@@ -7,6 +7,7 @@ import Header from "./Header";
 import Landing from "./Landing";
 import Dashboard from "./Dashboard";
 import WorkoutNew from "./workouts/WorkoutNew";
+// import WorkoutEdit from "./workouts/WorkoutEdit";
 
 class App extends Component {
   componentDidMount() {
@@ -18,7 +19,8 @@ class App extends Component {
         <div>
           <Header />
           <div className="container">
-            <Route path="/workouts/new" component={WorkoutNew} />
+            {/* <Route exact path="/workouts/:id" component={WorkoutEdit} /> */}
+            <Route exact path="/workouts/new" component={WorkoutNew} />
             <Route exact path="/workouts" component={Dashboard} />
             <Route exact path="/" component={Landing} />
           </div>

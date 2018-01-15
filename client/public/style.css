@@ -1,0 +1,23 @@
+div.nav-wrapper {
+  background: gray;
+}
+#money-button {
+  background-color: red;
+}
+#add-workout-button {
+  position: absolute;
+  right: 0;
+}
+#card-heading {
+  background: lightgray;
+}
+
+#card-list {
+  background: gray;
+}
+a.card-title {
+  color: white;
+}
+#card-review {
+  background: lightgray;
+}
